@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="#home">ПРО НАС</a></li>
+                    <li><a class="nav-link" href="#about">ОГЛЯД ЗАЛУ</a></li>
+                    <li><a class="nav-link" href="#services">ТРЕНЕРИ</a></li>
+                    <a href="index.html"><img class="header-logo" src="/img/logo-desktop.png" alt="logo"></a>
+                    
+                    <li><a class="nav-link" href="#contact">АКЦІЇ</a></li>
+                    <li><a class="nav-link" href="#contact">ПРАВИЛА</a></li>
+                    <li><a class="nav-link" href="#contact">КОНТАКТИ</a></li>
+                    <li><div class="work-hours"><p>Пн–Пт: 8:00–21:00</p><p>Сб–Нд: 9:00–18:00</p></div></li>
+                </ul>
+            </nav>
+            <button class="burger-btn" aria-label="Відкрити меню"><img src="/img/modal-nav.png" alt=""></button>
+        </div>
+        <div class="modal-menu" id="modalMenu">
+            <a href="index.html"><img class="header-logo" src="/img/logo-desktop.png" alt="logo"></a>
+            <button class="close-btn" id="closeModal">&times;</button>
+            <div class="modal-menu-content">
+                <a href="#home" class="modal-nav-link">ПРО НАС</a>
+                <a href="#about" class="modal-nav-link">ОГЛЯД ЗАЛУ</a>
+                <a href="#services" class="modal-nav-link">ТРЕНЕРИ</a>
+                <a href="#contact" class="modal-nav-link">АКЦІЇ</a>
+                <a href="#contact" class="modal-nav-link">ПРАВИЛА</a>
+                <a href="#contact" class="modal-nav-link">КОНТАКТИ</a>
+                <div class="work-hours"><p>Пн–Пт: 8:00–21:00</p><p>Сб–Нд: 9:00–18:00</p></div>
+            </div>
+        </div>
+    </header>
+
+<script src="modal-menu.js"></script>
+</body>
+</html>
