@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
     <header>
@@ -45,7 +47,172 @@
             </div>
         </div>
     </header>
+    <section>
+        <div class="video-container">
+            <video
+                    class="promo-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    poster="/media/promo-poster.jpg"
+            >
+                <source src="/img/video.MP4" type="video/webm">
+                <source src="/img/video.MP4"  type="video/mp4">
+                Ваш браузер не підтримує відео.
+            </video>
+        </div>
+    </section>
 
+    <section class="advantages-section">
+        <h2 class="advantages-title">НАШІ ПЕРЕВАГИ</h2>
+        <div class="advantages-grid">
+            <div class="advantage-card">
+                <div class="advantage-title">Ми поруч і є укриттям</div>
+                <div class="advantage-desc">Спортивний клуб знаходить в безпечному підвальному приміщенні</div>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-title">Велика парковка</div>
+                <div class="advantage-desc">Перед входом та навколо клубу є дуже багато паркомість</div>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-title">Станція для електромобілів</div>
+                <div class="advantage-desc">Наявність зарядної станції для електромобілів клієнтів прямо біля входу в клуб</div>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-title">Ваше тіло – наша турбота</div>
+                <div class="advantage-desc">І це не просто слова!</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services-section">
+        <h2 class="services-title">НАШІ ПОСЛУГИ</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="/img/personal.png" alt="Персональне тренування" class="service-img">
+                <div class="service-label">ПЕРСОНАЛЬНЕ<br>ТРЕНУВАННЯ</div>
+            </div>
+            <div class="service-card">
+                <img src="/img/group.png" alt="Групові тренування" class="service-img">
+                <div class="service-label">ГРУПОВІ<br>ТРЕНУВАННЯ</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="abonements-section">
+      <h2 class="abonements-title">АБОНЕМЕНТИ</h2>
+      <div class="swiper abonements-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="abonement-card">
+              <div class="abonement-duration">6 МІСЯЦІВ</div>
+              <div class="abonement-desc">Найвигідніший з урахуванням вартості повного місяця лише 725 грн</div>
+              <div class="abonement-price"><b>4350</b> грн</div>
+              <button class="abonement-btn">ОБРАТИ</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="abonement-card">
+              <div class="abonement-duration">3 МІСЯЦІ</div>
+              <div class="abonement-desc">Безлімітне відвідування залу всього за 767 грн на місяць</div>
+              <div class="abonement-price"><b>2301</b> грн</div>
+              <button class="abonement-btn">ОБРАТИ</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="abonement-card">
+              <div class="abonement-duration">1 МІСЯЦЬ</div>
+              <div class="abonement-desc">Безлімітне відвідування залу з 08.00 до 21.00 за 890 грн</div>
+              <div class="abonement-price"><b>890</b> грн</div>
+              <button class="abonement-btn">ОБРАТИ</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="abonement-card">
+              <div class="abonement-duration">12 МІСЯЦІВ</div>
+              <div class="abonement-desc">Річний абонемент — найкраща ціна за місяць</div>
+              <div class="abonement-price"><b>8000</b> грн</div>
+              <button class="abonement-btn">ОБРАТИ</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="abonement-card">
+              <div class="abonement-duration">1 ТИЖДЕНЬ</div>
+              <div class="abonement-desc">Тестовий абонемент для новачків</div>
+              <div class="abonement-price"><b>300</b> грн</div>
+              <button class="abonement-btn">ОБРАТИ</button>
+            </div>
+          </div>
+        </div>
+        <!-- Навігація -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-containter">
+            <div class="footer-left">
+                <a href="/src/index.html"><img src="/img/logo-desktop.png" alt="Titan Gym Logo" class="footer-logo"></a>
+                <div class="footer-socials">
+                <a href="https://www.tiktok.com/" target="_blank"><img src="/img/tiktok.svg" alt="TikTok"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="/img/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="/img/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="/img/youtube.svg" alt="YouTube"></a>
+                </div>
+                <div class="footer-copy">Titan Gym © 2025</div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-title">НАВІГАЦІЯ</div>
+                <ul class="footer-nav">
+                <li><a href="#home">ПРО НАС</a></li>
+                <li><a href="#about">ОГЛЯД ЗАЛУ</a></li>
+                <li><a href="#services">ТРЕНЕРИ</a></li>
+                <li><a href="#contact">АКЦІЇ</a></li>
+                <li><a href="#contact">ПРАВИЛА</a></li>
+                <li><a href="#contact">КОНТАКТИ</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <a href="#contact" class="footer-btn">ЗВ’ЯЗАТИСЯ</a>
+                <div class="footer-hours">
+                <div>Пн–Пт: 8:00–21:00</div>
+                <div>Сб–Нд: 9:00–18:00</div>
+                </div>
+                <div class="footer-slogan"><span>Your body - <b>is our care!</b></span></div>
+            </div>
+        </div>
+    </footer>
 <script src="modal-menu.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.abonements-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 16,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 8,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 12,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
