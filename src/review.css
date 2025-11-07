@@ -1,0 +1,178 @@
+
+.gym-review-section {
+  padding: 60px 0;
+  text-align: center;
+  background: #fff;
+}
+
+.gym-review-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+
+.gym-review-swiper {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.gym-review-swiper .swiper-slide {
+  width: 260px;
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.35s ease, box-shadow 0.3s ease;
+}
+
+.gym-review-swiper .swiper-slide:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.gym-review-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 0.6;
+}
+
+.swiper-button-prev { left: -60px; }
+.swiper-button-next { right: -60px; }
+
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  pointer-events: none;
+}
+
+/* Картка зони */
+.zone-card{
+  max-width: 90%;
+  margin: 40px auto;
+  background: #FFF200;
+  border-radius: 28px;
+  padding: 28px 28px 32px;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:#000;
+}
+
+.zone-card__title{
+  text-align: center;
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: .3px;
+  margin: 0 0 18px;
+}
+
+.zone-card__body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;   
+  gap: 24px;
+  align-items: start;
+}
+
+
+.zone-card__media{
+  border-radius: 22px;
+  overflow: hidden;
+}
+.zone-card__media img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-height: 340px;            
+  object-fit: cover;
+}
+
+
+.zone-card__text{
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+html { scroll-behavior: smooth; }
+
+.zone-card { scroll-margin-top: var(--header-offset, 100px); }
+
+
+.slide-link { display:block; width:100%; height:100%; }
+.slide-link img { pointer-events:none; } 
+
+/* Адаптив */
+@media (max-width: 900px){
+  .zone-card{ padding: 24px; }
+  .zone-card__title{ font-size: 28px; }
+  .zone-card__body{
+    grid-template-columns: 1fr; 
+    gap: 18px;
+  }
+  .zone-card__media img{ max-height: 320px; }
+}
+
+@media (max-width: 520px){
+  .zone-card{ padding: 20px; border-radius: 22px; }
+  .zone-card__title{ font-size: 24px; }
+  .zone-card__text{ font-size: 16px; }
+  .zone-card__media{ border-radius: 18px; }
+}
+
+
+@media (max-width: 1024px) {
+  .gym-review-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .gym-review-swiper .swiper-slide {
+    width: 220px;
+    height: 150px;
+  }
+
+  .swiper-button-prev { left: -40px; }
+  .swiper-button-next { right: -40px; }
+}
+
+@media (max-width: 768px) {
+  .gym-review-title {
+    font-size: 26px;
+  }
+
+  .gym-review-swiper .swiper-slide {
+    width: 180px;
+    height: 120px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}

@@ -20,8 +20,8 @@
             
             <nav>
                 <ul class="nav-list">
-                    <li><a class="nav-link" href="#home">ПРО НАС</a></li>
-                    <li><a class="nav-link" href="#about">ОГЛЯД ЗАЛУ</a></li>
+                    <li><a class="nav-link" href="/src/index.html">ПРО НАС</a></li>
+                    <li><a class="nav-link" href="/src/review.html">ОГЛЯД ЗАЛУ</a></li>
                     <li><a class="nav-link" href="#services">ТРЕНЕРИ</a></li>
                     <a href="index.html"><img class="header-logo" src="/img/logo-desktop.png" alt="logo"></a>
                     
@@ -146,10 +146,28 @@
             </div>
           </div>
         </div>
-        <!-- Навігація -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+
+        <div class="swiper-button-prev">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 22H14M14 22L22 30M14 22L22 14" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 22H30M30 22L22 14M30 22L22 30" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
       </div>
+    </section>
+    <section class="gift-training-section">
+      <div class="gift-training-title">
+        ХОЧЕШ <span style="font-style:italic;">ПЕРСОНАЛЬНЕ</span><br>ПОДАРУНКОВЕ ТРЕНУВАННЯ?
+      </div>
+      <form class="gift-training-form">
+        <input type="text" class="gift-input" placeholder="Ім’я" required>
+        <input type="tel" class="gift-input" placeholder="+38(0)..." required>
+        <button type="submit" class="gift-training-btn">ЗАПИСАТИСЯ НА ПЕРСОНАЛЬНЕ<br>ПОДАРУНКОВЕ ТРЕНУВАННЯ</button>
+      </form>
     </section>
     <footer class="footer">
         <div class="footer-containter">
@@ -190,25 +208,24 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   new Swiper('.abonements-swiper', {
-    slidesPerView: 3,
-    spaceBetween: 16,
+    slidesPerView: 1,
+    spaceBetween: 20,
     loop: true,
+    centeredSlides: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 8,
-      },
       768: {
         slidesPerView: 2,
-        spaceBetween: 12,
+        spaceBetween: 20,
+        centeredSlides: true,
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 16,
+        spaceBetween: 20,
+        centeredSlides: true,
       }
     }
   });

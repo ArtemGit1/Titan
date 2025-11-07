@@ -459,8 +459,8 @@ body {
 
 /* Abonements section */
 .abonements-section {
-  margin: 48px 0 0 0;
   text-align: center;
+  margin: 48px 0 0 0;
 }
 .abonements-title {
   font-family: 'Inter', sans-serif;
@@ -477,29 +477,27 @@ body {
 .swiper {
   width: 100%;
 }
-.swiper-wrapper {
-  justify-content: center;
-}
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: stretch;
 }
 .abonement-card {
-  background: linear-gradient(180deg, #fff200 80%, #fff 100%);
+  background: linear-gradient(180deg, #fff200 40%, #fff 100%);
   border-radius: 28px;
   width: 280px;
-    height: 240px;
+  height: 240px;
   padding: 22px 18px 18px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.04);
   font-family: 'Inter', sans-serif;
+  justify-content: flex-start;
 }
 .abonement-duration {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   font-style: italic;
   margin-bottom: 8px;
@@ -507,12 +505,17 @@ body {
 .abonement-desc {
   font-size: 16px;
   margin-bottom: 16px;
+  text-align: center;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-end;
 }
 .abonement-price {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   font-style: italic;
   margin-bottom: 12px;
+  margin-top: auto;
 }
 .abonement-btn {
   display: inline-block;
@@ -528,28 +531,169 @@ body {
   text-decoration: none;
   transition: background 0.18s, color 0.18s;
   cursor: pointer;
+  margin-top: 0;
 }
-.abonement-btn:hover {
-  background: #111;
-  color: #fff200;
-}
-
-.swiper-button-next, .swiper-button-prev {
-  color: #2196f3;
+.custom-arrow {
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  position: absolute;
   top: 50%;
+  z-index: 2;
   transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.swiper-button-next {
-  right: 0;
+.swiper-button-prev.custom-arrow {
+  left: -60px;
+}
+.swiper-button-next.custom-arrow {
+  right: -60px;
+}
+.custom-arrow img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+.swiper-button-next, .swiper-button-prev {
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .swiper-button-prev {
-  left: 0;
+  left: -60px;
+}
+.swiper-button-next {
+  right: -60px;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-next img, .swiper-button-prev img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 1023px) {
+  .abonements-swiper {
+    max-width: 600px;
+  }
 }
 @media (max-width: 767px) {
   .abonements-swiper {
-    max-width: 95vw;
+    max-width: 100vw;
+    padding: 0 0 32px 0;
   }
   .abonement-card {
-    width: 280px;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .swiper-slide {
+    justify-content: center;
+  }
+}
+
+/* Gift Training Section */
+.gift-training-section {
+  background: #111 url('/img/oil_lines.svg') center/cover no-repeat;
+  border-radius: 36px;
+  padding: 48px 32px 40px 32px;
+  max-width: 950px;
+  margin: 48px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.gift-training-title {
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 38px;
+  line-height: 1.1;
+}
+.gift-training-form {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+.gift-input {
+  width: 100%;
+  height: 44px;
+  border-radius: 28px;
+  border: none;
+  background: #fff200;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  padding: 0 18px;
+  margin-bottom: 0;
+  outline: none;
+}
+.gift-training-btn {
+  width: 100%;
+  border-radius: 28px;
+  background: #e60000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  border: none;
+  padding: 12px 0;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.gift-training-btn:hover {
+  background: #b80000;
+}
+@media (max-width: 700px) {
+  .gift-training-section {
+    padding: 28px 8px 24px 8px;
+    border-radius: 18px;
+    max-width: 98vw;
+  }
+  .gift-training-title {
+    font-size: 26px;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  .gift-training-form {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .gift-input {
+    width: 85%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .gift-training-btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
