@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>Document</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="review.css">
+  <title>Titan Gym — Огляд залу</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="review.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
-    <header>
+<header>
         <div class="header-container">
             
             <nav>
                 <ul class="nav-list">
                     <li><a class="nav-link" href="/src/index.html">ПРО НАС</a></li>
                     <li><a class="nav-link" href="/src/review.html">ОГЛЯД ЗАЛУ</a></li>
-                    <li><a class="nav-link" href="#services">ТРЕНЕРИ</a></li>
+                    <li><a class="nav-link" href="/src/trainers.html">ТРЕНЕРИ</a></li>
                     <a href="index.html"><img class="header-logo" src="/img/logo-desktop.png" alt="logo"></a>
                     
-                    <li><a class="nav-link" href="#contact">АКЦІЇ</a></li>
-                    <li><a class="nav-link" href="#contact">ПРАВИЛА</a></li>
-                    <li><a class="nav-link" href="#contact">КОНТАКТИ</a></li>
-                    
+                    <li><a class="nav-link" href="/src/actions.html">АКЦІЇ</a></li>
+                    <li><a class="nav-link" href="/src/rules.html">ПРАВИЛА</a></li>
+                    <li><a class="nav-link" href="/src/contact.html">КОНТАКТИ</a></li>
+
                 </ul>
             </nav>
             <button class="burger-btn" aria-label="Відкрити меню"><img src="/img/modal-nav.png" alt=""></button>
@@ -39,155 +40,230 @@
             <a href="index.html"><img class="header-logo" src="/img/logo-desktop.png" alt="logo"></a>
             <button class="close-btn" id="closeModal">&times;</button>
             <div class="modal-menu-content">
-                <a href="#home" class="modal-nav-link">ПРО НАС</a>
-                <a href="#about" class="modal-nav-link">ОГЛЯД ЗАЛУ</a>
-                <a href="#services" class="modal-nav-link">ТРЕНЕРИ</a>
-                <a href="#contact" class="modal-nav-link">АКЦІЇ</a>
-                <a href="#contact" class="modal-nav-link">ПРАВИЛА</a>
-                <a href="#contact" class="modal-nav-link">КОНТАКТИ</a>
+                <a href="/src/index.html" class="modal-nav-link">ПРО НАС</a>
+                <a href="/src/review.html" class="modal-nav-link">ОГЛЯД ЗАЛУ</a>
+                <a href="/src/trainers.html" class="modal-nav-link">ТРЕНЕРИ</a>
+                <a href="/src/actions.html" class="modal-nav-link">АКЦІЇ</a>
+                <a href="/src/rules.html" class="modal-nav-link">ПРАВИЛА</a>
+                <a href="/src/contact.html" class="modal-nav-link">КОНТАКТИ</a>
                 <div class="work-hours"><p>Пн–Пт: 8:00–21:00</p><p>Сб–Нд: 9:00–18:00</p></div>
             </div>
         </div>
     </header>
 
-    
-    <section class="gym-review-section">
-      <h2 class="gym-review-title">Огляд залу</h2>
-      <div class="swiper gym-review-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="/img/gym/arms.jpg" alt="Зал 1" class="gym-review-img"></div>
-          <div class="swiper-slide"><img src="/img/gym/abs.jpg" alt="Зал 2" class="gym-review-img"></div>
-          <div class="swiper-slide"><img src="/img/gym/reception.jpg" alt="Зал 2" class="gym-review-img"></div>
-          <div class="swiper-slide"><img src="/img/gym/squats.jpg" alt="Зал 2" class="gym-review-img"></div>
-          <div class="swiper-slide">
-  <a href="#zone-cardio" class="slide-link" aria-label="Кардіо зона">
-    <img src="/img/gym/kardio.jpg" alt="Кардіо зона" class="gym-review-img">
-  </a>
+<section class="gym-review-section">
+  <h2 class="gym-review-title">Огляд залу</h2>
+  <div class="swiper gym-review-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <a href="#zone-cardio" class="slide-link" aria-label="Кардіо зона">
+          <img src="/img/gym/kardio.jpg" alt="Кардіо зона" class="gym-review-img">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#zone-cardio" class="slide-link" aria-label="Кардіо зона">
+          <img src="/img/gym/kardio_2.jpg" alt="Кардіо зона 2" class="gym-review-img">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#zone-arms" class="slide-link" aria-label="Зона силових тренажерів">
+          <img src="/img/gym/arms.jpg" alt="Зона силових тренажерів" class="gym-review-img">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#zone-legs" class="slide-link" aria-label="Зона для тренування ніг">
+          <img src="/img/gym/squats.jpg" alt="Зона для тренування ніг" class="gym-review-img">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#zone-abs" class="slide-link" aria-label="Змішана зона / прес">
+          <img src="/img/gym/abs.jpg" alt="Змішана зона" class="gym-review-img">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#zone-reception" class="slide-link" aria-label="Зона рецепції">
+          <img src="/img/gym/reception.jpg" alt="Зона рецепції" class="gym-review-img">
+        </a>
+      </div>
+
+    </div>
+    <div class="swiper-button-prev">
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 22H14M14 22L22 30M14 22L22 14" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="swiper-button-next">
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 22H30M30 22L22 14M30 22L22 30" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="zone-card-section">
+  <!-- РЕЦЕПЦІЯ -->
+  <div id="zone-reception" class="zone-card zone-card--bg" style="--zone-bg: url('/img/gym/cards-icons/reception.png')">
+    <h3 class="zone-card__title">РЕЦЕПЦІЯ</h3>
+    <div class="zone-card__body">
+      <div class="zone-card__media">
+        <img src="/img/gym/reception.jpg" alt="Рецепція" class="zoomable" />
+      </div>
+      <div class="zone-card__text">
+        <p>
+          Рецепція — це перше місце, куди ви потрапляєте, переступаючи поріг спортзалу. Тут вас зустріне привітний персонал, готовий відповісти на всі запитання, допомогти з абонементом, записом на тренування чи консультацією тренера.
+          Зона оформлена з комфортом і стилем, щоб створити приємне враження з перших секунд перебування у залі. Саме тут ви можете залишити особисті речі, придбати воду або спортивне харчування, дізнатися про акції та події клубу.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- КАРДІО -->
+  <div id="zone-cardio" class="zone-card zone-card--bg" style="--zone-bg: url('/img/gym/cards-icons/cardio.png')">
+    <h3 class="zone-card__title">КАРДІО ЗОНА</h3>
+    <div class="zone-card__body">
+      <div class="zone-card__media">
+        <img src="/img/gym/kardio.jpg" alt="Кардіо зона" class="zoomable" />
+      </div>
+      <div class="zone-card__text">
+        <p>
+          Простір для розвитку витривалості та спалювання калорій. Тут є все необхідне:
+          бігові доріжки, велотренажери, орбітреки та степери. Ідеальне місце для
+          ефективного розігріву, покращення серцево-судинної системи та підвищення
+          енергії перед основним тренуванням.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- РУКИ / ВЕРХ ТІЛА -->
+  <div id="zone-arms" class="zone-card zone-card--bg" style="--zone-bg: url('/img/gym/cards-icons/arm.png')">
+    <h3 class="zone-card__title">ЗОНА СИЛОВИХ ТРЕНАЖЕРІВ</h3>
+    <div class="zone-card__body">
+      <div class="zone-card__media">
+        <img src="/img/gym/arms.jpg" alt="Зона силових тренажерів" class="zoomable" />
+      </div>
+      <div class="zone-card__text">
+        <p>
+          У цій зоні зібране все необхідне для ефективних тренувань рук, плечей, грудей і спини. Вас чекають гантелі різної ваги, штанги, силові рами, лавки та спеціалізовані тренажери для біцепсів і трицепсів.
+          Це ідеальне місце для тих, хто прагне зміцнити м’язи, покращити пропорції тіла та підвищити витривалість. Тут можна виконувати як базові вправи, так і ізольовані рухи для точкового опрацювання м’язів, формуючи сильні та естетично розвинені руки.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- НОГИ -->
+  <div id="zone-legs" class="zone-card zone-card--bg" style="--zone-bg: url('/img/gym/cards-icons/leg.png')">
+    <h3 class="zone-card__title">ЗОНА ДЛЯ ТРЕНУВАННЯ НІГ</h3>
+    <div class="zone-card__body">
+      <div class="zone-card__media">
+        <img src="/img/gym/squats.jpg" alt="Зона для тренування ніг" class="zoomable" />
+      </div>
+      <div class="zone-card__text">
+        <p>
+          Ця зона обладнана всім необхідним для ефективного тренування нижньої частини тіла: тренажери для стегон і сідниць, платформи для жиму ногами, степ-машини, тренажери для згинання й розгинання ніг, а також гантелі та штанги для присідань.
+          Тут можна виконувати як базові вправи — присідання, випади, жим ногами — так і ізольовані вправи для опрацювання окремих груп м’язів.
+          Регулярні тренування в цій зоні допомагають зміцнити ноги, покращити поставу, підвищити витривалість і досягти гармонійних пропорцій тіла.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ЗМІШАНА / ПРЕС -->
+  <div id="zone-abs" class="zone-card zone-card--bg" style="--zone-bg: url('/img/gym/cards-icons/fitness.png')">
+    <h3 class="zone-card__title">ЗМІШАНА ЗОНА</h3>
+    <div class="zone-card__body">
+      <div class="zone-card__media">
+        <img src="/img/gym/abs.jpg" alt="Зона для тренування пресу" class="zoomable" />
+      </div>
+      <div class="zone-card__text">
+        <p>
+          У цій зоні зібране все необхідне для ефективних тренувань рук, плечей, грудей і спини. Вас чекають гантелі різної ваги, штанги, силові рами, лавки та спеціалізовані тренажери для біцепсів і трицепсів.
+          Це ідеальне місце для тих, хто прагне зміцнити м’язи, покращити пропорції тіла та підвищити витривалість. Тут можна виконувати як базові вправи, так і ізольовані рухи для точкового опрацювання м’язів, формуючи сильні та естетично розвинені руки.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gift-training-section">
+  <div class="gift-training-title">
+    ХОЧЕШ <span style="font-style:italic;">ПЕРСОНАЛЬНЕ</span><br>ПОДАРУНКОВЕ ТРЕНУВАННЯ?
+  </div>
+  <form class="gift-training-form">
+    <input type="text" class="gift-input" placeholder="Ім’я" required>
+    <input type="tel" class="gift-input" placeholder="+38(0)..." required>
+    <button type="submit" class="gift-training-btn">ЗАПИСАТИСЯ НА ПЕРСОНАЛЬНЕ<br>ПОДАРУНКОВЕ ТРЕНУВАННЯ</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="footer-containter">
+    <div class="footer-left">
+      <a href="/src/index.html"><img src="/img/logo-desktop.png" alt="Titan Gym Logo" class="footer-logo"></a>
+      <div class="footer-socials">
+        <a href="https://www.tiktok.com/" target="_blank"><img src="/img/tiktok.svg" alt="TikTok"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="/img/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="/img/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="/img/youtube.svg" alt="YouTube"></a>
+      </div>
+      <div class="footer-copy">Titan Gym © 2025</div>
+    </div>
+    <div class="footer-center">
+      <div class="footer-title">НАВІГАЦІЯ</div>
+      <ul class="footer-nav">
+        <li><a href="#home">ПРО НАС</a></li>
+        <li><a href="#about">ОГЛЯД ЗАЛУ</a></li>
+        <li><a href="#services">ТРЕНЕРИ</a></li>
+        <li><a href="#contact">АКЦІЇ</a></li>
+        <li><a href="#contact">ПРАВИЛА</a></li>
+        <li><a href="#contact">КОНТАКТИ</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <a href="#contact" class="footer-btn">ЗВ’ЯЗАТИСЯ</a>
+      <div class="footer-hours">
+        <div>Пн–Пт: 8:00–21:00</div>
+        <div>Сб–Нд: 9:00–18:00</div>
+      </div>
+      <div class="footer-slogan"><span>Your body - <b>is our care!</b></span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Модальне вікно для перегляду зображень -->
+<div id="imgModal" class="img-modal" aria-hidden="true">
+  <button class="img-close" aria-label="Закрити (Esc)">&times;</button>
+  <img class="img-modal-content" id="imgModalContent" alt="">
 </div>
-<div class="swiper-slide">
-  <a href="#zone-cardio" class="slide-link" aria-label="Кардіо зона">
-    <img src="/img/gym/kardio_2.jpg" alt="Кардіо зона 2" class="gym-review-img">
-  </a>
-</div>
 
-          <!-- Додайте ще фото за потреби -->
-        </div>
-        <div class="swiper-button-prev">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30 22H14M14 22L22 30M14 22L22 14" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="swiper-button-next">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14 22H30M30 22L22 14M30 22L22 30" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <section id="zone-cardio" class="zone-card">
-      <h3 class="zone-card__title">КАРДІО ЗОНА</h3>
-
-      <div class="zone-card__body">
-        <div class="zone-card__media">
-          <img src="/img/gym/kardio.jpg" alt="Кардіо зона" />
-        </div>
-
-        <div class="zone-card__text">
-          <p>
-            Простір для розвитку витривалості та спалювання калорій. Тут є все необхідне:
-            бігові доріжки, велотренажери, орбітреки та степери. Ідеальне місце для
-            ефективного розігріву, покращення серцево-судинної системи та підвищення
-            енергії перед основним тренуванням.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="gift-training-section">
-      <div class="gift-training-title">
-        ХОЧЕШ <span style="font-style:italic;">ПЕРСОНАЛЬНЕ</span><br>ПОДАРУНКОВЕ ТРЕНУВАННЯ?
-      </div>
-      <form class="gift-training-form">
-        <input type="text" class="gift-input" placeholder="Ім’я" required>
-        <input type="tel" class="gift-input" placeholder="+38(0)..." required>
-        <button type="submit" class="gift-training-btn">ЗАПИСАТИСЯ НА ПЕРСОНАЛЬНЕ<br>ПОДАРУНКОВЕ ТРЕНУВАННЯ</button>
-      </form>
-    </section>
-    <footer class="footer">
-        <div class="footer-containter">
-            <div class="footer-left">
-                <a href="/src/index.html"><img src="/img/logo-desktop.png" alt="Titan Gym Logo" class="footer-logo"></a>
-                <div class="footer-socials">
-                <a href="https://www.tiktok.com/" target="_blank"><img src="/img/tiktok.svg" alt="TikTok"></a>
-                <a href="https://www.instagram.com/" target="_blank"><img src="/img/instagram.svg" alt="Instagram"></a>
-                <a href="https://www.facebook.com/" target="_blank"><img src="/img/facebook.svg" alt="Facebook"></a>
-                <a href="https://www.youtube.com/" target="_blank"><img src="/img/youtube.svg" alt="YouTube"></a>
-                </div>
-                <div class="footer-copy">Titan Gym © 2025</div>
-            </div>
-            <div class="footer-center">
-                <div class="footer-title">НАВІГАЦІЯ</div>
-                <ul class="footer-nav">
-                <li><a href="#home">ПРО НАС</a></li>
-                <li><a href="#about">ОГЛЯД ЗАЛУ</a></li>
-                <li><a href="#services">ТРЕНЕРИ</a></li>
-                <li><a href="#contact">АКЦІЇ</a></li>
-                <li><a href="#contact">ПРАВИЛА</a></li>
-                <li><a href="#contact">КОНТАКТИ</a></li>
-                </ul>
-            </div>
-            <div class="footer-right">
-                <a href="#contact" class="footer-btn">ЗВ’ЯЗАТИСЯ</a>
-                <div class="footer-hours">
-                <div>Пн–Пт: 8:00–21:00</div>
-                <div>Сб–Нд: 9:00–18:00</div>
-                </div>
-                <div class="footer-slogan"><span>Your body - <b>is our care!</b></span></div>
-            </div>
-        </div>
-    </footer>
 <script src="modal-menu.js"></script>
-
-<!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   new Swiper('.gym-review-swiper', {
-  slidesPerView: 1,
-  spaceBetween: 24,
-  loop: true,
-  loopedSlides: 6,
-  centeredSlides: true,
-  speed: 600,
-  grabCursor: true,
-  preloadImages: true,
-  updateOnImagesReady: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 24,
-      centeredSlides: true,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 24,
-      centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    loopedSlides: 6,
+    centeredSlides: true,
+    speed: 600,
+    grabCursor: true,
+    preloadImages: true,
+    updateOnImagesReady: true,
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    breakpoints: {
+      768: { slidesPerView: 2, spaceBetween: 24, centeredSlides: true },
+      1024:{ slidesPerView: 3, spaceBetween: 24, centeredSlides: true }
     }
-  }
-});
+  });
 
-const header = document.querySelector('header');
+  const header = document.querySelector('header');
   function setHeaderOffset() {
     const h = header ? header.offsetHeight : 100;
     document.documentElement.style.setProperty('--header-offset', `${h}px`);
   }
   setHeaderOffset();
   window.addEventListener('resize', setHeaderOffset);
-
 
   document.querySelectorAll('.slide-link').forEach(a => {
     a.addEventListener('click', (e) => {
@@ -198,8 +274,35 @@ const header = document.querySelector('header');
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+
+  /* ---- ЗБІЛЬШЕННЯ ЗОБРАЖЕНЬ У КАРТКАХ ---- */
+  (function(){
+    const images = document.querySelectorAll('.zone-card .zone-card__media .zoomable');
+    const modal  = document.getElementById('imgModal');
+    const modalImg = document.getElementById('imgModalContent');
+    const closeBtn = document.querySelector('.img-close');
+
+    images.forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.setAttribute('aria-hidden', 'false');
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; 
+      });
+    });
+
+    function closeModal(){
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+      modalImg.removeAttribute('src');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+  })();
 </script>
-
-
 </body>
 </html>
