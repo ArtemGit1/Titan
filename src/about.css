@@ -1,0 +1,30 @@
+
+.about-section {
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.about-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.about-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+}
+
+.about-text {
+    max-width: 85%;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;;
+    font-style: italic;
+
+}

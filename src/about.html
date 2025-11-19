@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="actions.css">
+    <link rel="stylesheet" href="about.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,7 @@
 <body>
     <header>
         <div class="header-container">
+            
             <nav>
                 <ul class="nav-list">
                     <li><a class="nav-link" href="/src/about.html">ПРО НАС</a></li>
@@ -41,76 +42,28 @@
                 <a href="/src/about.html" class="modal-nav-link">ПРО НАС</a>
                 <a href="/src/review.html" class="modal-nav-link">ОГЛЯД ЗАЛУ</a>
                 <a href="/src/trainers.html" class="modal-nav-link">ТРЕНЕРИ</a>
-                <a href="#contact" class="modal-nav-link">АКЦІЇ</a>
-                <a href="#contact" class="modal-nav-link">ПРАВИЛА</a>
-                <a href="#contact" class="modal-nav-link">КОНТАКТИ</a>
+                <a href="/src/actions.html" class="modal-nav-link">АКЦІЇ</a>
+                <a href="/src/rules.html" class="modal-nav-link">ПРАВИЛА</a>
+                <a href="/src/contact.html" class="modal-nav-link">КОНТАКТИ</a>
                 <div class="work-hours"><p>Пн–Пт: 8:00–21:00</p><p>Сб–Нд: 9:00–18:00</p></div>
             </div>
         </div>
     </header>
-   <section class="promo-section" aria-labelledby="promo-title">
 
-        <h2 class="actions-title">АКЦІЇ</h2>
-        <h2 id="promo-title" class="visually-hidden">Наші знижки та бонуси</h2>
+    <section class="about-section">
 
-        <ul class="promo-list">
-
-            <li class="promo-item">
-                <div class="promo-text">
-                <div class="promo-value">- 10%</div>
-                <div class="promo-caption">на абонементи для школярів та студентів</div>
-                </div>
-                <div class="promo-icon">
-                <img src="/img/actions-icons/student.svg" alt="" aria-hidden="true">
-                </div>
-            </li>
-
-            <li class="promo-item" style="background: linear-gradient(90deg, #FFF200 0%, #FFB800 100%);">
-                <div class="promo-text">
-                <div class="promo-value">- 10%</div>
-                <div class="promo-caption">на абонементи для військових</div>
-                </div>
-                <div class="promo-icon">
-                <img src="/img/actions-icons/army.svg" alt="" aria-hidden="true">
-                </div>
-            </li>
-
-            <li class="promo-item">
-                <div class="promo-text">
-                <div class="promo-value">- 10%</div>
-                <div class="promo-caption">на абонементи до твого дня народження</div>
-                </div>
-                <div class="promo-icon">
-                <img src="/img/actions-icons/birthday.svg" alt="" aria-hidden="true">
-                </div>
-            </li>
-
-            <li class="promo-item" style="background: linear-gradient(90deg, #FFF200 0%, #FFB800 100%);">
-                <div class="promo-text">
-                <div class="promo-value">+ 14</div>
-                <div class="promo-caption">днів до абонементу в подарунок за приведеного в зал друга/подругу</div>
-                </div>
-                <div class="promo-icon">
-                <img src="/img/actions-icons/friends.svg" alt="" aria-hidden="true">
-                </div>
-            </li>
-
-        </ul>
-
+        <h2 class="about-title">Про нас</h2>
+        <div class="about-image">
+            <img src="/img/about.JPG" alt="Зал" />
+        </div>
+        <p class="about-text">
+            Про нас: фітнес-клуб заснований у березні 2019-го року командою, яку очолив мотоактивіст міста, що мав великий практичний досвід у спорті та бізнесі. Головним завданням при відкритті клубу було надання можливості якісного і доступного заняття фітнесом та бодибілдингом жителям району міста, де взагалі на було фітнес-клубів. Девізом клубу стало гасло «ваше тіло – наша турбота», що відобразилося у створенні відповідної атмосфери в клубі, незалежно від відношення до спорту, віку та статі. Ми впевненні, що здорове тіло людини, це найкраща інвестиція в її житті, яка доступна абсолютно кожному.
+            Наша команда покращує якість життя людей шляхом залучення до фітнес-культури, в реаліях військового стану ми вчимо людей бути здоровими та красивими та психологічно стійкими. <b>Доречі наш клуб також відповідає вимогам укриття.</b
+        </p>
 
     </section>
 
-    <section class="gift-training-section">
-      <div class="gift-training-title">
-        ХОЧЕШ <span style="font-style:italic;">ПЕРСОНАЛЬНЕ</span><br>ПОДАРУНКОВЕ ТРЕНУВАННЯ?
-      </div>
-      <form class="gift-training-form">
-        <input type="text" class="gift-input" placeholder="Ім’я" required>
-        <input type="tel" class="gift-input" placeholder="+38(0)..." required>
-        <button type="submit" class="gift-training-btn">ЗАПИСАТИСЯ НА ПЕРСОНАЛЬНЕ<br>ПОДАРУНКОВЕ ТРЕНУВАННЯ</button>
-      </form>
-    </section>
-    <footer class="footer">
+<footer class="footer">
         <div class="footer-containter">
             <div class="footer-left">
                 <a href="/src/index.html"><img src="/img/logo-desktop.png" alt="Titan Gym Logo" class="footer-logo"></a>
@@ -144,7 +97,3 @@
         </div>
     </footer>
 <script src="modal-menu.js"></script>
-
-
-</body>
-</html>

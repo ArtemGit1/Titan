@@ -1,4 +1,4 @@
-/* -------- Promo section -------- */
+
 .actions-title{
       font-family: 'Inter', sans-serif;
   font-size: 40px;
@@ -71,7 +71,7 @@
   opacity: .9;                         
 }
 
-/* -------- Адаптив -------- */
+
 @media (max-width: 640px){
   .promo-item{
     grid-template-columns: 1fr 110px;
