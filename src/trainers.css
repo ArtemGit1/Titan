@@ -1,0 +1,186 @@
+/* Секція тренерів */
+.trainers-section {
+	margin: 40px auto 0 auto;
+	max-width: 900px;
+	text-align: center;
+}
+.trainers-title {
+	font-size: 2.3rem;
+	font-weight: 700;
+	margin-bottom: 32px;
+}
+.trainers-list {
+	display: flex;
+	gap: 32px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.trainer-card {
+	background: #fff;
+	border-radius: 32px;
+	box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+	overflow: hidden;
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 24px;
+	position: relative;
+}
+.trainer-photo {
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
+	object-position: top;
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+}
+.trainer-info {
+	background: #ffe600;
+	padding: 20px 16px 16px 16px;
+	border-bottom-left-radius: 32px;
+	border-bottom-right-radius: 32px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.trainer-name {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+.trainer-actions {
+	display: flex;
+	gap: 12px;
+	width: 100%;
+	justify-content: center;
+}
+
+.trainer-signup-btn {
+	background: transparent;
+	color: #222;
+	border: 2px solid #222;
+	border-radius: 24px;
+	font-size: 1.1rem;
+	font-weight: 700;
+	padding: 8px 24px;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+}
+.trainer-signup-btn:hover,
+.trainer-signup-btn:focus {
+	background: #222;
+	color: #ffe600;
+}
+
+.trainer-details-btn {
+	background: transparent;
+	border: 2px solid #222;
+	border-radius: 50%;
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.trainer-details-btn:hover,
+.trainer-details-btn:focus {
+	background: #222;
+}
+.trainer-details-btn svg rect {
+	transition: fill 0.2s;
+}
+.trainer-details-btn:hover svg rect,
+.trainer-details-btn:focus svg rect {
+	fill: #ffe600;
+}
+.trainer-details-btn:hover svg rect,
+.trainer-details-btn:focus svg rect {
+	fill: #ffe600;
+}
+.trainer-details-btn:active,
+.trainer-signup-btn:active {
+	background: #222;
+	color: #ffe600;
+}
+
+/* Модальне вікно */
+.trainer-modal {
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: rgba(0,0,0,0.45);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	animation: fadeIn 0.2s;
+}
+.trainer-modal-content {
+	background: #fff;
+	border-radius: 24px;
+	padding: 32px 24px 24px 24px;
+	max-width: 400px;
+	width: 100%;
+	position: relative;
+	box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+	text-align: center;
+	animation: scaleIn 0.2s;
+}
+.trainer-modal-close {
+	position: absolute;
+	top: 12px;
+	right: 16px;
+	background: none;
+	border: none;
+	font-size: 2.2rem;
+	color: #222;
+	cursor: pointer;
+	line-height: 1;
+}
+.trainer-modal-photo {
+		width: 120px;
+		height: 120px;
+		object-fit: cover;
+		object-position: top;
+		border-radius: 50%;
+		margin-bottom: 16px;
+}
+.trainer-modal-name {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+.trainer-modal-desc {
+	font-size: 1.05rem;
+	margin-bottom: 10px;
+}
+.trainer-modal-achievements,
+.trainer-modal-contacts {
+	font-size: 0.98rem;
+	margin-bottom: 8px;
+}
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes scaleIn {
+	from { transform: scale(0.95); }
+	to { transform: scale(1); }
+}
+
+@media (max-width: 800px) {
+	.trainers-list {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+	.trainer-card {
+		width: 90vw;
+		min-width: 0;
+	}
+		.trainer-photo {
+			height: 220px;
+			object-position: top;
+		}
+}

@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="trainers.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,15 +50,91 @@
         </div>
     </header>
 
+    <section class="trainers-section">
+      <h2 class="trainers-title">Тренери</h2>
+      <div class="trainers-list">
+        <div class="trainer-card" data-trainer="aliona">
+          <img src="../img/trainers/aliona.jpg" alt="Хорева Альона" class="trainer-photo">
+          <div class="trainer-info">
+            <div class="trainer-name">Альона</div>
+            <div class="trainer-actions">
+              <button class="trainer-signup-btn">ЗАПИСАТИСЯ</button>
+              <button class="trainer-details-btn" data-trainer="aliona" aria-label="Детальніше про Альону">
+                <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="8" width="20" height="2" rx="1" fill="#222"/><rect x="4" y="13" width="20" height="2" rx="1" fill="#222"/><rect x="4" y="18" width="20" height="2" rx="1" fill="#222"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="trainer-card" data-trainer="andrii">
+          <img src="../img/trainers/andrii.jpg" alt="Рубан Андрій" class="trainer-photo">
+          <div class="trainer-info">
+            <div class="trainer-name">Андрій</div>
+            <div class="trainer-actions">
+              <button class="trainer-signup-btn">ЗАПИСАТИСЯ</button>
+              <button class="trainer-details-btn" data-trainer="andrii" aria-label="Детальніше про Андрія">
+                <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="8" width="20" height="2" rx="1" fill="#222"/><rect x="4" y="13" width="20" height="2" rx="1" fill="#222"/><rect x="4" y="18" width="20" height="2" rx="1" fill="#222"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="trainer-card" data-trainer="ihor">
+          <img src="../img/trainers/ihor.jpg" alt="Андюкаєв Ігор" class="trainer-photo">
+          <div class="trainer-info">
+            <div class="trainer-name">Ігор</div>
+            <div class="trainer-actions">
+              <button class="trainer-signup-btn">ЗАПИСАТИСЯ</button>
+              <button class="trainer-details-btn" data-trainer="ihor" aria-label="Детальніше про Ігоря">
+                <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="8" width="20" height="2" rx="1" fill="#222"/><rect x="4" y="13" width="20" height="2" rx="1" fill="#222"/><rect x="4" y="18" width="20" height="2" rx="1" fill="#222"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="trainer-card" data-trainer="mykhailo">
+          <img src="../img/trainers/mykhailo.jpg" alt="Сировежкін Михайло" class="trainer-photo">
+          <div class="trainer-info">
+            <div class="trainer-name">Михайло</div>
+            <div class="trainer-actions">
+              <button class="trainer-signup-btn">ЗАПИСАТИСЯ</button>
+              <button class="trainer-details-btn" data-trainer="mykhailo" aria-label="Детальніше про Михайла">
+                <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="8" width="20" height="2" rx="1" fill="#222"/><rect x="4" y="13" width="20" height="2" rx="1" fill="#222"/><rect x="4" y="18" width="20" height="2" rx="1" fill="#222"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="trainer-card" data-trainer="tetiana">
+          <img src="../img/trainers/tetiana.jpg" alt="Семенюк Тетяна" class="trainer-photo">
+          <div class="trainer-info">
+            <div class="trainer-name">Тетяна</div>
+            <div class="trainer-actions">
+              <button class="trainer-signup-btn">ЗАПИСАТИСЯ</button>
+              <button class="trainer-details-btn" data-trainer="tetiana" aria-label="Детальніше про Тетяну">
+                <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="8" width="20" height="2" rx="1" fill="#222"/><rect x="4" y="13" width="20" height="2" rx="1" fill="#222"/><rect x="4" y="18" width="20" height="2" rx="1" fill="#222"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Модальне вікно для детальної інформації про тренера -->
+    <div class="trainer-modal" id="trainerModal" style="display:none;">
+      <div class="trainer-modal-content">
+        <button class="trainer-modal-close" id="closeTrainerModal" aria-label="Закрити">&times;</button>
+        <div id="trainerModalBody">
+          <!-- Динамічно підставляється JS -->
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
         <div class="footer-containter">
             <div class="footer-left">
                 <a href="/src/index.html"><img src="/img/logo-desktop.png" alt="Titan Gym Logo" class="footer-logo"></a>
                 <div class="footer-socials">
-                <a href="https://www.tiktok.com/" target="_blank"><img src="/img/tiktok.svg" alt="TikTok"></a>
-                <a href="https://www.instagram.com/" target="_blank"><img src="/img/instagram.svg" alt="Instagram"></a>
-                <a href="https://www.facebook.com/" target="_blank"><img src="/img/facebook.svg" alt="Facebook"></a>
-                <a href="https://www.youtube.com/" target="_blank"><img src="/img/youtube.svg" alt="YouTube"></a>
+                    <a href="https://www.tiktok.com/@titangym47?_t=ZM-90vuBT2t5tT&_r=1" target="_blank"><img src="/img/tiktok.svg" alt="TikTok"></a>
+                    <a href="https://www.instagram.com/titan_gym_che/" target="_blank"><img src="/img/instagram.svg" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/share/1HWRpX5RNV/" target="_blank"><img src="/img/facebook.svg" alt="Facebook"></a>
+                    <a href="https://youtube.com/@titan_ghernihiv?si=5J8oLTavU4Dm3DAW" target="_blank"><img src="/img/youtube.svg" alt="YouTube"></a>
                 </div>
                 <div class="footer-copy">Titan Gym © 2025</div>
             </div>
@@ -84,5 +161,7 @@
     </footer>
 
 <script src="modal-menu.js"></script>
+<script src="trainers-modal.js"></script>
+<script src="modal-form.js"></script>
 </body>
 </html>

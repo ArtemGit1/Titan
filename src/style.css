@@ -1,3 +1,105 @@
+/* Модальна форма запису */
+.form-modal-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s;
+}
+.form-modal {
+  background: linear-gradient(135deg, #181818 60%, #222 100%);
+  border-radius: 20px;
+  padding: 36px 28px 24px 28px;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 350px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+  color: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+  position: relative;
+  text-align: center;
+}
+.form-modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #fff;
+}
+.form-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.form-modal-close:hover {
+  color: #ffe600;
+}
+.form-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.form-modal-form input,
+.form-modal-form select {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  font-family: inherit;
+  background: #fff;
+  color: #222;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+.form-modal-form input:focus,
+.form-modal-form select:focus {
+  box-shadow: 0 0 0 2px #ffe600;
+}
+.form-modal-form select {
+  cursor: pointer;
+}
+.form-modal-submit {
+  background: #ffe600;
+  color: #111;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  margin-top: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.form-modal-submit:hover,
+.form-modal-submit:focus {
+  background: #222;
+  color: #ffe600;
+}
+.form-modal-note {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+@media (max-width: 500px) {
+  .form-modal {
+    padding: 20px 6vw 18px 6vw;
+    min-width: 0;
+    width: 98vw;
+  }
+  .form-modal-title {
+    font-size: 1.3rem;
+  }
+}
 /* Header Styles */
 body {
     font-family: 'Inter', sans-serif;

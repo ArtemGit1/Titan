@@ -1,0 +1,43 @@
+/* Секція правил Titan Gym */
+.rules-section {
+	margin: 40px auto 0 auto;
+	max-width: 700px;
+	padding: 0 16px;
+}
+
+.rules-title {
+	font-size: 2rem;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.rules-text {
+	font-size: 1rem;
+	color: #222;
+	line-height: 1.6;
+	font-family: 'Inter', Arial, sans-serif;
+}
+
+.rules-text p {
+	margin-bottom: 16px;
+}
+
+.rules-text i {
+	color: #666;
+	font-size: 1.05em;
+}
+
+@media (max-width: 600px) {
+	.rules-section {
+		margin-top: 24px;
+		padding: 0 8px;
+	}
+	.rules-title {
+		font-size: 1.3rem;
+		margin-bottom: 16px;
+	}
+	.rules-text {
+		font-size: 0.97rem;
+	}
+}
