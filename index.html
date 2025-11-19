@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./src/normalize.css">
+    <link rel="stylesheet" href="./src/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,29 +17,33 @@
 <body>
     <header>
         <div class="header-container">
+            
             <nav>
                 <ul class="nav-list">
-                    <li><a class="nav-link" href="about.html">ПРО НАС</a></li>
-                    <li><a class="nav-link" href="review.html">ОГЛЯД ЗАЛУ</a></li>
-                    <li><a class="nav-link" href="actions.html">АКЦІЇ</a></li>
-                    <a href="index.html"><img class="header-logo" src="img/logo-desktop.png" alt="logo"></a>
-                    <li><a class="nav-link" href="trainers.html">ТРЕНЕРИ</a></li>
-                    <li><a class="nav-link" href="rules.html">ПРАВИЛА</a></li>
-                    <li><a class="nav-link" href="contact.html">КОНТАКТИ</a></li>
+                    <li><a class="nav-link" href="/src/about.html">ПРО НАС</a></li>
+                    <li><a class="nav-link" href="/src/review.html">ОГЛЯД ЗАЛУ</a></li>
+                    
+                    <li><a class="nav-link" href="/src/actions.html">АКЦІЇ</a></li>
+                    <a href="index.html"><img class="header-logo" src="/img/logo-desktop.png" alt="logo"></a>
+                    
+                    <li><a class="nav-link" href="/src/trainers.html">ТРЕНЕРИ</a></li>
+                    <li><a class="nav-link" href="/src/rules.html">ПРАВИЛА</a></li>
+                    <li><a class="nav-link" href="/src/contact.html">КОНТАКТИ</a></li>
+
                 </ul>
             </nav>
-            <button class="burger-btn" aria-label="Відкрити меню"><img src="img/modal-nav.png" alt=""></button>
+            <button class="burger-btn" aria-label="Відкрити меню"><img src="/img/modal-nav.png" alt=""></button>
         </div>
         <div class="modal-menu" id="modalMenu">
-            <a href="index.html"><img class="header-logo" src="img/logo-desktop.png" alt="logo"></a>
+            <a href="index.html"><img class="header-logo" src="/img/logo-desktop.png" alt="logo"></a>
             <button class="close-btn" id="closeModal">&times;</button>
             <div class="modal-menu-content">
-                <a href="about.html" class="modal-nav-link">ПРО НАС</a>
-                <a href="review.html" class="modal-nav-link">ОГЛЯД ЗАЛУ</a>
-                <a href="trainers.html" class="modal-nav-link">ТРЕНЕРИ</a>
-                <a href="actions.html" class="modal-nav-link">АКЦІЇ</a>
-                <a href="rules.html" class="modal-nav-link">ПРАВИЛА</a>
-                <a href="contact.html" class="modal-nav-link">КОНТАКТИ</a>
+                <a href="/src/index.html" class="modal-nav-link">ПРО НАС</a>
+                <a href="/src/review.html" class="modal-nav-link">ОГЛЯД ЗАЛУ</a>
+                <a href="/src/trainers.html" class="modal-nav-link">ТРЕНЕРИ</a>
+                <a href="/src/actions.html" class="modal-nav-link">АКЦІЇ</a>
+                <a href="/src/rules.html" class="modal-nav-link">ПРАВИЛА</a>
+                <a href="/src/contact.html" class="modal-nav-link">КОНТАКТИ</a>
                 <div class="work-hours"><p>Пн–Пт: 8:00–21:00</p><p>Сб–Нд: 9:00–18:00</p></div>
             </div>
         </div>
@@ -53,14 +57,15 @@
                     loop
                     playsinline
                     preload="metadata"
-                    poster="media/promo-poster.jpg"
+                    poster="/media/promo-poster.jpg"
             >
-                <source src="img/video.MP4" type="video/webm">
-                <source src="img/video.MP4"  type="video/mp4">
+                <source src="/img/video.MP4" type="video/webm">
+                <source src="/img/video.MP4"  type="video/mp4">
                 Ваш браузер не підтримує відео.
             </video>
         </div>
     </section>
+
     <section class="advantages-section">
         <h2 class="advantages-title">НАШІ ПЕРЕВАГИ</h2>
         <div class="advantages-grid">
@@ -82,19 +87,21 @@
             </div>
         </div>
     </section>
+    
     <section class="services-section">
         <h2 class="services-title">НАШІ ПОСЛУГИ</h2>
         <div class="services-grid">
             <div class="service-card">
-                <img src="img/personal.png" alt="Персональне тренування" class="service-img">
+                <img src="/img/personal.png" alt="Персональне тренування" class="service-img">
                 <div class="service-label">ПЕРСОНАЛЬНЕ<br>ТРЕНУВАННЯ</div>
             </div>
             <div class="service-card">
-                <img src="img/group.png" alt="Групові тренування" class="service-img">
+                <img src="/img/group.png" alt="Групові тренування" class="service-img">
                 <div class="service-label">ГРУПОВІ<br>ТРЕНУВАННЯ</div>
             </div>
         </div>
     </section>
+    
     <section class="abonements-section">
       <h2 class="abonements-title">АБОНЕМЕНТИ</h2>
       <div class="swiper abonements-swiper">
@@ -140,6 +147,7 @@
             </div>
           </div>
         </div>
+
         <div class="swiper-button-prev">
           <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M30 22H14M14 22L22 30M14 22L22 14" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -165,12 +173,12 @@
     <footer class="footer">
         <div class="footer-containter">
             <div class="footer-left">
-                <a href="index.html"><img src="img/logo-desktop.png" alt="Titan Gym Logo" class="footer-logo"></a>
+                <a href="/src/index.html"><img src="/img/logo-desktop.png" alt="Titan Gym Logo" class="footer-logo"></a>
                 <div class="footer-socials">
-                <a href="https://www.tiktok.com/@titangym47?_t=ZM-90vuBT2t5tT&_r=1" target="_blank"><img src="img/tiktok.svg" alt="TikTok"></a>
-                <a href="https://www.instagram.com/titan_gym_che/" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
-                <a href="https://www.facebook.com/share/1HWRpX5RNV/" target="_blank"><img src="img/facebook.svg" alt="Facebook"></a>
-                <a href="https://youtube.com/@titan_ghernihiv?si=5J8oLTavU4Dm3DAW" target="_blank"><img src="img/youtube.svg" alt="YouTube"></a>
+                <a href="https://www.tiktok.com/@titangym47?_t=ZM-90vuBT2t5tT&_r=1" target="_blank"><img src="/img/tiktok.svg" alt="TikTok"></a>
+                <a href="https://www.instagram.com/titan_gym_che/" target="_blank"><img src="/img/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.facebook.com/share/1HWRpX5RNV/" target="_blank"><img src="/img/facebook.svg" alt="Facebook"></a>
+                <a href="https://youtube.com/@titan_ghernihiv?si=5J8oLTavU4Dm3DAW" target="_blank"><img src="/img/youtube.svg" alt="YouTube"></a>
                 </div>
                 <div class="footer-copy">Titan Gym © 2025</div>
             </div>
@@ -197,6 +205,7 @@
     </footer>
 <script src="modal-menu.js"></script>
 <script src="modal-form.js"></script>
+
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
@@ -223,5 +232,6 @@
     }
   });
 </script>
+
 </body>
 </html>
