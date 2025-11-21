@@ -25,11 +25,11 @@
           <input type="tel" name="phone" placeholder="Телефон" required autocomplete="off">
           <select name="abonement" required>
             <option value="" disabled selected>Оберіть абонемент</option>
-            <option value="1тиждень">1 тиждень</option>
+            <option value="1 місяць ранковий">1 місяць ранковий</option>
             <option value="1 місяць">1 місяць</option>
             <option value="3 місяці">3 місяці</option>
-            <option value="6 місяців">6 місяців</option>
-            <option value="12 місяців">12 місяців</option>
+            <option value="5 місяців">5 місяців</option>
+            <option value="10 місяців">10 місяців</option>
           </select>
           <button type="submit" class="form-modal-submit">Надіслати</button>
         </form>
