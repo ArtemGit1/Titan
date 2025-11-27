@@ -61,43 +61,34 @@
       errorBlock.style.margin = '0 0 10px 0';
       form.insertBefore(errorBlock, form.firstChild);
     }
-    form.onsubmit = function(e) {
-      e.preventDefault();
-      let valid = true;
-      let errors = [];
- 
-      if (!/^([А-Яа-яЁёЇїІіЄєҐґA-Za-z\s'-]{2,})$/.test(nameInput.value.trim())) {
-        valid = false;
-        errors.push("Введіть коректне ім'я (лише букви, мінімум 2 символи)");
-        nameInput.style.boxShadow = '0 0 0 2px #ff3b3b';
-      } else {
-        nameInput.style.boxShadow = '';
-      }
+    form.onsubmit = async function(e) {
+  e.preventDefault();
 
-      let phoneVal = phoneInput.value.replace(/\D/g, '');
-      if (phoneVal.length < 10 || !/^0?\d{9,}$/.test(phoneVal)) {
-        valid = false;
-        errors.push("Введіть коректний телефон (10 цифр)");
-        phoneInput.style.boxShadow = '0 0 0 2px #ff3b3b';
-      } else {
-        phoneInput.style.boxShadow = '';
-      }
 
-      if (abonementSelect && !abonementSelect.value) {
-        valid = false;
-        errors.push("Оберіть абонемент");
-        abonementSelect.style.boxShadow = '0 0 0 2px #ff3b3b';
-      } else if (abonementSelect) {
-        abonementSelect.style.boxShadow = '';
-      }
-      if (!valid) {
-        errorBlock.innerHTML = errors.join('<br>');
-        return;
-      }
-      errorBlock.innerHTML = '';
+  const fd = new FormData(form);
+  const payload = Object.fromEntries(fd.entries());
+
+  payload.type = type === 'abonement' ? 'abonement' : 'simple';
+
+  try {
+
+    const res = await fetch("https://withered-king-8f59.123ctakan123.workers.dev/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    if (res.ok) {
+      alert("Дякуємо за заявку!");
       removeForm();
-      alert('Дякуємо за заявку!');
-    };
+    } else {
+      alert("Помилка при відправці форми");
+    }
+  } catch (err) {
+    alert("Помилка мережі: " + err.message);
+  }
+};
+
   }
   function removeForm() {
     const modal = document.getElementById('formModalBg');
