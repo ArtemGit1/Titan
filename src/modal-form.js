@@ -1,6 +1,4 @@
-
 (function() {
-
   const formSimple = `
     <div class="form-modal-bg" id="formModalBg">
       <div class="form-modal">
@@ -15,6 +13,7 @@
       </div>
     </div>
   `;
+
   const formAbonement = `
     <div class="form-modal-bg" id="formModalBg">
       <div class="form-modal">
@@ -38,15 +37,16 @@
     </div>
   `;
 
-
   function showForm(type) {
     removeForm();
     document.body.insertAdjacentHTML('beforeend', type === 'abonement' ? formAbonement : formSimple);
     document.body.style.overflow = 'hidden';
+
     document.getElementById('formModalClose').onclick = removeForm;
     document.getElementById('formModalBg').onclick = function(e) {
       if (e.target === this) removeForm();
     };
+
     const form = document.querySelector('.form-modal-form');
     const nameInput = form.querySelector('input[name="name"]');
     const phoneInput = form.querySelector('input[name="phone"]');
@@ -61,35 +61,63 @@
       errorBlock.style.margin = '0 0 10px 0';
       form.insertBefore(errorBlock, form.firstChild);
     }
+
     form.onsubmit = async function(e) {
-  e.preventDefault();
+      e.preventDefault();
 
+      // Валідація
+      let valid = true;
+      let errors = [];
 
-  const fd = new FormData(form);
-  const payload = Object.fromEntries(fd.entries());
+      if (!/^([А-Яа-яЁёЇїІіЄєҐґA-Za-z\s'-]{2,})$/.test(nameInput.value.trim())) {
+        valid = false;
+        errors.push("Введіть коректне ім'я (мінімум 2 літери)");
+        nameInput.style.boxShadow = '0 0 0 2px #ff3b3b';
+      } else nameInput.style.boxShadow = '';
 
-  payload.type = type === 'abonement' ? 'abonement' : 'simple';
+      let phoneVal = phoneInput.value.replace(/\D/g, '');
+      if (phoneVal.length < 10) {
+        valid = false;
+        errors.push("Введіть коректний телефон (10 цифр)");
+        phoneInput.style.boxShadow = '0 0 0 2px #ff3b3b';
+      } else phoneInput.style.boxShadow = '';
 
-  try {
+      if (abonementSelect && !abonementSelect.value) {
+        valid = false;
+        errors.push("Оберіть абонемент");
+        abonementSelect.style.boxShadow = '0 0 0 2px #ff3b3b';
+      } else if (abonementSelect) abonementSelect.style.boxShadow = '';
 
-    const res = await fetch("https://withered-king-8f59.123ctakan123.workers.dev/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
+      if (!valid) {
+        errorBlock.innerHTML = errors.join('<br>');
+        return;
+      }
+      errorBlock.innerHTML = '';
 
-    if (res.ok) {
-      alert("Дякуємо за заявку!");
-      removeForm();
-    } else {
-      alert("Помилка при відправці форми");
-    }
-  } catch (err) {
-    alert("Помилка мережі: " + err.message);
+      // Надсилаємо на Worker
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+      payload.type = type === 'abonement' ? 'abonement' : 'simple';
+
+      try {
+        const res = await fetch("https://withered-king-8f59.123ctakan123.workers.dev/", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          alert("Дякуємо за заявку!");
+          removeForm();
+        } else {
+          alert("Помилка при відправці форми");
+        }
+      } catch (err) {
+        alert("Помилка мережі: " + err.message);
+      }
+    };
   }
-};
 
-  }
   function removeForm() {
     const modal = document.getElementById('formModalBg');
     if (modal) {
@@ -98,32 +126,15 @@
     }
   }
 
-
   window.showSignupForm = function() { showForm('simple'); };
   window.showAbonementForm = function() { showForm('abonement'); };
 
-
   document.addEventListener('DOMContentLoaded', function() {
- 
-    document.querySelectorAll('.footer-btn').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.showSignupForm();
-      });
+    document.querySelectorAll('.footer-btn, .trainer-signup-btn').forEach(btn => {
+      btn.addEventListener('click', e => { e.preventDefault(); window.showSignupForm(); });
     });
-
-    document.querySelectorAll('.trainer-signup-btn').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.showSignupForm();
-      });
-    });
-
     document.querySelectorAll('.abonement-btn').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.showAbonementForm();
-      });
+      btn.addEventListener('click', e => { e.preventDefault(); window.showAbonementForm(); });
     });
   });
 })();
