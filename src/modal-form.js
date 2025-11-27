@@ -39,18 +39,17 @@
 
   function showForm(type) {
     removeForm();
-    document.body.insertAdjacentHTML('beforeend', type === 'abonement' ? formAbonement : formSimple);
+    const html = type === 'abonement' ? formAbonement : formSimple;
+    document.body.insertAdjacentHTML('beforeend', html);
     document.body.style.overflow = 'hidden';
 
-    document.getElementById('formModalClose').onclick = removeForm;
-    document.getElementById('formModalBg').onclick = function(e) {
-      if (e.target === this) removeForm();
-    };
+    const modalClose = document.getElementById('formModalClose');
+    const modalBg = document.getElementById('formModalBg');
+    if (modalClose) modalClose.onclick = removeForm;
+    if (modalBg) modalBg.onclick = (e) => { if (e.target === modalBg) removeForm(); };
 
     const form = document.querySelector('.form-modal-form');
-    const nameInput = form.querySelector('input[name="name"]');
-    const phoneInput = form.querySelector('input[name="phone"]');
-    const abonementSelect = form.querySelector('select[name="abonement"]');
+    if (!form) return;
 
     let errorBlock = form.querySelector('.form-modal-error');
     if (!errorBlock) {
@@ -65,21 +64,28 @@
     form.onsubmit = async function(e) {
       e.preventDefault();
 
+      const nameInput = form.querySelector('input[name="name"]');
+      const phoneInput = form.querySelector('input[name="phone"]');
+      const abonementSelect = form.querySelector('select[name="abonement"]');
+
       let valid = true;
       let errors = [];
 
-      if (!/^([А-Яа-яЁёЇїІіЄєҐґA-Za-z\s'-]{2,})$/.test(nameInput.value.trim())) {
+      if (!nameInput || !/^([А-Яа-яЁёЇїІіЄєҐґA-Za-z\s'-]{2,})$/.test(nameInput.value.trim())) {
         valid = false;
         errors.push("Введіть коректне ім'я (мінімум 2 літери)");
-        nameInput.style.boxShadow = '0 0 0 2px #ff3b3b';
-      } else nameInput.style.boxShadow = '';
+        if (nameInput) nameInput.style.boxShadow = '0 0 0 2px #ff3b3b';
+      } else if (nameInput) nameInput.style.boxShadow = '';
 
-      let phoneVal = phoneInput.value.replace(/\D/g, '');
-      if (phoneVal.length < 10) {
-        valid = false;
-        errors.push("Введіть коректний телефон (10 цифр)");
-        phoneInput.style.boxShadow = '0 0 0 2px #ff3b3b';
-      } else phoneInput.style.boxShadow = '';
+      if (!phoneInput) valid = false;
+      else {
+        let phoneVal = phoneInput.value.replace(/\D/g, '');
+        if (!/^\d{10,12}$/.test(phoneVal)) {
+          valid = false;
+          errors.push("Введіть коректний телефон (тільки цифри, мінімум 10)");
+          phoneInput.style.boxShadow = '0 0 0 2px #ff3b3b';
+        } else phoneInput.style.boxShadow = '';
+      }
 
       if (abonementSelect && !abonementSelect.value) {
         valid = false;
@@ -90,15 +96,18 @@
       if (!valid) {
         errorBlock.innerHTML = errors.join('<br>');
         return;
+      } else {
+        errorBlock.innerHTML = '';
       }
-      errorBlock.innerHTML = '';
 
-      // Відправка на Worker
       const payload = {
         name: nameInput.value.trim(),
         phone: phoneInput.value.trim(),
-        type: type === 'abonement' ? 'abonement' : 'simple'
+        type: type === 'abonement' ? 'Абонемент' : 'Контакт',
+        abonement: abonementSelect ? abonementSelect.value : undefined
       };
+
+      console.log("Payload:", payload);
 
       try {
         const res = await fetch("https://withered-king-8f59.123ctakan123.workers.dev/", {
@@ -119,38 +128,42 @@
     };
   }
 
-  // gift-training форма під Worker
+  // Gift training форма
   const giftForm = document.querySelector('.gift-training-form');
   if (giftForm) {
-    giftForm.addEventListener('submit', async function(e) {
+    let errorDiv = giftForm.querySelector('.gift-form-error');
+    if (!errorDiv) {
+      errorDiv = document.createElement('div');
+      errorDiv.className = 'gift-form-error';
+      errorDiv.style.color = '#ffe600';
+      errorDiv.style.margin = '10px 0';
+      giftForm.insertBefore(errorDiv, giftForm.firstChild);
+    }
+
+    giftForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const nameInput = giftForm.querySelector('input[placeholder*="Ім’я"]');
       const phoneInput = giftForm.querySelector('input[placeholder*="+38"]');
-      let errorDiv = giftForm.querySelector('.gift-form-error');
-      if (!errorDiv) {
-        errorDiv = document.createElement('div');
-        errorDiv.className = 'gift-form-error';
-        errorDiv.style.color = '#ffe600';
-        errorDiv.style.margin = '10px 0';
-        giftForm.insertBefore(errorDiv, giftForm.firstChild);
-      }
 
       let valid = true;
       let errors = [];
 
-      if (!/^([А-Яа-яЁёЇїІіЄєҐґA-Za-z\s'-]{2,})$/.test(nameInput.value.trim())) {
+      if (!nameInput || !/^([А-Яа-яЁёЇїІіЄєҐґA-Za-z\s'-]{2,})$/.test(nameInput.value.trim())) {
         valid = false;
         errors.push("Введіть коректне ім'я (мінімум 2 літери)");
-        nameInput.style.boxShadow = '0 0 0 2px #ff3b3b';
-      } else nameInput.style.boxShadow = '';
+        if (nameInput) nameInput.style.boxShadow = '0 0 0 2px #ff3b3b';
+      } else if (nameInput) nameInput.style.boxShadow = '';
 
-      const phoneVal = phoneInput.value.replace(/\D/g, '');
-      if (phoneVal.length < 10) {
-        valid = false;
-        errors.push("Введіть коректний телефон (10 цифр)");
-        phoneInput.style.boxShadow = '0 0 0 2px #ff3b3b';
-      } else phoneInput.style.boxShadow = '';
+      if (!phoneInput) valid = false;
+      else {
+        const phoneVal = phoneInput.value.replace(/\D/g, '');
+        if (!/^\d{10,12}$/.test(phoneVal)) {
+          valid = false;
+          errors.push("Введіть коректний телефон (тільки цифри, мінімум 10)");
+          phoneInput.style.boxShadow = '0 0 0 2px #ff3b3b';
+        } else phoneInput.style.boxShadow = '';
+      }
 
       if (!valid) {
         errorDiv.style.display = 'block';
@@ -164,8 +177,10 @@
       const payload = {
         name: nameInput.value.trim(),
         phone: phoneInput.value.trim(),
-        type: 'simple'
+        type: 'Подарункова'
       };
+
+      console.log("Gift Payload:", payload);
 
       try {
         const res = await fetch("https://withered-king-8f59.123ctakan123.workers.dev/", {
@@ -201,10 +216,10 @@
     }
   }
 
-  window.showSignupForm = function() { showForm('simple'); };
-  window.showAbonementForm = function() { showForm('abonement'); };
+  window.showSignupForm = () => showForm('simple');
+  window.showAbonementForm = () => showForm('abonement');
 
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.footer-btn, .trainer-signup-btn').forEach(btn => {
       btn.addEventListener('click', e => { e.preventDefault(); window.showSignupForm(); });
     });
