@@ -107,7 +107,7 @@
         abonement: abonementSelect ? abonementSelect.value : undefined
       };
 
-      console.log("Payload:", payload);
+ 
 
       try {
         const res = await fetch("https://withered-king-8f59.123ctakan123.workers.dev/", {
@@ -180,7 +180,7 @@
         type: 'Подарункова'
       };
 
-      console.log("Gift Payload:", payload);
+
 
       try {
         const res = await fetch("https://withered-king-8f59.123ctakan123.workers.dev/", {
