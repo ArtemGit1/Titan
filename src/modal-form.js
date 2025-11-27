@@ -128,7 +128,7 @@
     };
   }
 
-  // Gift training форма
+
   const giftForm = document.querySelector('.gift-training-form');
   if (giftForm) {
     let errorDiv = giftForm.querySelector('.gift-form-error');
