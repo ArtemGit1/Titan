@@ -26,6 +26,7 @@
             <option value="" disabled selected>Оберіть абонемент</option>
             <option value="1 місяць ранковий">1 місяць ранковий</option>
             <option value="1 місяць">1 місяць</option>
+            <option value="1 місяць">8 занять на 2 місяці</option>
             <option value="3 місяці">3 місяці</option>
             <option value="5 місяців">5 місяців</option>
             <option value="10 місяців">10 місяців</option>
